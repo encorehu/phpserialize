@@ -545,7 +545,7 @@ def dict_to_list(d):
     # array_hook.
     d = dict(d)
     try:
-        return [d[x] for x in xrange(len(d))]
+        return [d[x] for x in d.keys()]
     except KeyError:
         raise ValueError('dict is not a sequence')
 
